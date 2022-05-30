@@ -83,7 +83,7 @@ exports['qtarget']:Player({
             job = "police",
             action = function(entity)
                 TriggerServerEvent('esx_policejob:handcuff', GetPlayerServerId(NetworkGetPlayerIndexFromPed(entity)))
-            end,
+            end, -- i need this event thx bixbi :)
             canInteract = function(entity)
                 if IsPedAPlayer(entity) then 
                     return (not IsPedDeadOrDying(entity, 1))
